@@ -21,5 +21,5 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
-	e.Logger.Fatal(e.Start(":" + port))
+	e.Logger.Fatal(e.Start("0.0.0.0:" + port))
 }
