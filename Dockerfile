@@ -12,4 +12,4 @@ RUN [ -e /usr/bin/upx ] && upx /go/bin/helloworld-go || echo
 FROM scratch
 COPY --link --from=build-dev /go/bin/helloworld-go /go/bin/helloworld-go
 COPY --from=build-dev /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-CMD ["/go/bin/helloworld-go"]
+ENTRYPOINT ["/go/bin/helloworld-go"]
